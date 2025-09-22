@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Chat Message</title>
+    <style>
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .header {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+      .message-box {
+        background: #ffffff;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+      .visitor-info {
+        color: #6c757d;
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      .message-content {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 15px 0;
+      }
+      .cta-button {
+        display: inline-block;
+        background: #fac815;
+        color: #000000 !important;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 6px;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+      .footer {
+        border-top: 1px solid #e9ecef;
+        padding-top: 20px;
+        margin-top: 30px;
+        color: #6c757d;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2 style="margin: 0; color: #495057">💬 New Chat Message</h2>
+      </div>
+
+      <div class="message-box">
+        <div class="visitor-info">
+          <strong>From:</strong> {{visitorName}}
+          <span style="color: #adb5bd">&lt;{{visitorEmail}}&gt;</span><br />
+          <strong>Time:</strong> {{timestamp}}
+        </div>
+
+        <div class="message-content">
+          <blockquote
+            style="
+              border-left: 3px solid #fac815;
+              padding-left: 15px;
+              margin: 0;
+              font-style: italic;
+              color: #495057;
+            "
+          >
+            {{messageContent}}
+          </blockquote>
+        </div>
+      </div>
+
+      <div style="text-align: center">
+        <a href="{{dashboardLink}}" class="cta-button">
+          View & Reply in Dashboard →
+        </a>
+      </div>
+
+      <div class="footer">
+        <p>This message was sent through your portfolio chat system.</p>
+        <p>Session ID: {{sessionId}} | Message ID: {{messageId}}</p>
+      </div>
+    </div>
+  </body>
+</html>

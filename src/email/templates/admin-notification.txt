@@ -1,0 +1,11 @@
+New Chat Message
+
+From: {{visitorName}} <{{visitorEmail}}>
+Time: {{timestamp}}
+
+Message:
+"{{messageContent}}"
+
+View and reply: {{dashboardLink}}
+
+Session ID: {{sessionId}} | Message ID: {{messageId}}
