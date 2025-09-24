@@ -189,6 +189,10 @@ export class ChatService {
         const { data, error } = await client.rpc('get_admin_session_summary');
 
         if (error) {
+          this.logger.warn(
+            '⚠️ RPC call for get_admin_session_summary failed, falling back to manual query:',
+            error.message,
+          );
           // Fallback to manual query if RPC doesn't exist
           const { data: sessions, error: sessionError } = await client
             .from('chat_sessions')
